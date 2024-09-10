@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Recuperar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="margin-top: 25px; padding: 25px;">
+
+    <ion-item>
+      <ion-input [(ngModel)]="usu" label="Usuario:"  placeholder="Ingrese Usuario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-button expand="block" color="primary" [routerLink]="'/login'">Recuperar</ion-button>
+    </ion-item>
+
+  </div>
+</ion-content>

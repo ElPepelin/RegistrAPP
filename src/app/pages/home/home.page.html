@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Pagina de inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <h1> Bienvenido {{usuario}} </h1>
+    <ion-button expand="full" color="primary" (click)="irAlLogin()">Cerrar Sesión</ion-button>
+  </div>
+</ion-content>

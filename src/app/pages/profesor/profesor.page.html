@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Vista Profesor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <h1> Bienvenido, Profesor {{usuarioP}} </h1>
+
+    <ion-button expand="full" color="primary" (click)="generarCodigoQR()">
+      Generar Código QR
+    </ion-button>
+
+    <div *ngIf="codigoQR">
+      <h3>Escanea el código para registrar asistencia:</h3>
+      <img [src]="codigoQR" alt="Código QR" />
+    </div>
+
+    <ion-button expand="full" color="secondary" [routerLink]="['/reportes']">
+      Ver Reportes de Asistencia
+    </ion-button>
+
+    <ion-button expand="full" color="danger" [routerLink]="['/login']">
+      Cerrar Sesion
+    </ion-button>
+
+  </div>
+</ion-content>
