@@ -4,9 +4,71 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-   <div class="ion-padding">
-    <h2>Reportes de la Clase</h2>
-    <!-- Aquí puedes añadir tablas o gráficos de asistencia -->
+
+<ion-content>
+  <div>
+  <H1 style="text-align: center; margin-top: 25px; ">Reportes de Asistencia</H1>
+  </div>
+  
+  <div>
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label color="tertiary">Seccion 02</ion-label>
+      </ion-item-divider>
+    
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>Pepe</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Asistencia: 18%</div>
+        </ion-accordion>
+        <ion-accordion value="second">
+          <ion-item slot="header" color="light">
+            <ion-label>Julio</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Asistencia: 100%</div>
+        </ion-accordion>
+        <ion-accordion value="third">
+          <ion-item slot="header" color="light">
+            <ion-label>Emilio</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Asistencia: 50%</div>
+        </ion-accordion>
+      </ion-accordion-group>
+
+      <ion-item-divider>
+        <ion-label color="tertiary">Seccion 05</ion-label>
+      </ion-item-divider>
+      
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>Ignacio</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Asistencia: 80%</div>
+        </ion-accordion>
+        <ion-accordion value="second">
+          <ion-item slot="header" color="light">
+            <ion-label>Cristian</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Asistencia: 20%</div>
+        </ion-accordion>
+        <ion-accordion value="third">
+          <ion-item slot="header" color="light">
+            <ion-label>Diego</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Asistencia: 0%</div>
+        </ion-accordion>
+      </ion-accordion-group>
+
+
+    </ion-item-group>
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-button expand="full" color="secondary" [routerLink]="['/profesor']">
+    Volver
+  </ion-button>
+</ion-footer>

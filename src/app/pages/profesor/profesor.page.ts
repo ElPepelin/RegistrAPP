@@ -12,14 +12,12 @@ export class ProfesorPage implements OnInit {
   codigoQR: string = '';
 
   constructor() { }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
   async generarCodigoQR() {
     const textoParaQR = 'ClaseID-25';
     this.codigoQR = await QRCode.toDataURL(textoParaQR);
-  }
-
-
-  ngOnInit(): void {
-    this.usuarioP=localStorage.getItem("usuarioP") ?? ''
   }
 }

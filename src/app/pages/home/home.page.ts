@@ -9,7 +9,7 @@ import { NavController } from '@ionic/angular';
 export class HomePage implements OnInit {
 
   usuario:string=""
-
+  private values: string[] = ['first', 'second', 'third'];
 
   constructor(private navCtrl: NavController) { }
 
@@ -21,4 +21,13 @@ export class HomePage implements OnInit {
     this.navCtrl.navigateForward(['/login']);
     
   }
+
+  accordionGroupChange = (ev: any) => {
+    const collapsedItems = this.values.filter((value) => value !== ev.detail.value);
+    const selectedValue = ev.detail.value;
+
+    console.log(
+      `Expanded: ${selectedValue === undefined ? 'None' : ev.detail.value} | Collapsed: ${collapsedItems.join(', ')}`
+    );
+  };
 }
